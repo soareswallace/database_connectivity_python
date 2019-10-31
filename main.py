@@ -33,7 +33,8 @@ if __name__ == "__main__":
             print('- PARTICIPA')
             print('-------------- LEMBRE DE DIGITAR O NOME EXATO DE TABELAS, COLUNAS -------------')
             print('-------------- Essas sao as opcoes de tabela -------------')
-            table = raw_input("Qual sua opcao? ")
+            sql = raw_input("Digite seu script\n ")
+            sgbd.insert(sql)
         elif op == '2':
             # ATUALIZAR
             print ('Em qual tabela? Voce precisa digitar o nome exato da tabela. VOCE PRECISA DIGITAR O NOME EXATO DA TABELA')
@@ -54,12 +55,8 @@ if __name__ == "__main__":
             print('- PARTICIPA')
             print('-------------- LEMBRE DE DIGITAR O NOME EXATO DE TABELAS, COLUNAS -------------')
             print('-------------- Essas sao as opcoes de tabela -------------')
-            table = raw_input("Qual sua opcao? ")
-            filter_column = raw_input("A partir de qual coluna devemos selecionar? ")
-            filter = raw_input("E qual deve ser o valor dessa coluna? ")
-            column = raw_input("Qual coluna deve ser alterada? ")
-            new_value = raw_input("Qual o novo valor dessa coluna? ")
-            sgbd.update(table, column, filter_column, filter, new_value)
+            sql = raw_input("Digite seu script\n ")
+            sgbd.update(sql)
         elif op == '3':
             # REMOVER
             print ('Em qual tabela? Voce precisa digitar o nome exato da tabela. VOCE PRECISA DIGITAR O NOME EXATO DA TABELA')
@@ -80,10 +77,8 @@ if __name__ == "__main__":
             print('- PARTICIPA')
             print('-------------- LEMBRE DE DIGITAR O NOME EXATO DE TABELAS, COLUNAS -------------')
             print('-------------- Essas sao as opcoes de tabela -------------')
-            table = raw_input("Qual sua opcao? ")
-            filter_column = raw_input("A partir de qual coluna devemos selecionar? ")
-            filter = raw_input("E qual deve ser o valor dessa coluna? ")
-            sgbd.delete(table, filter_column, filter)
+            sql = raw_input("Digite seu script\n ")
+            sgbd.delete(sql)
         elif op == '4':
             # SELECIONAR
             print ('Em qual tabela? Voce precisa digitar o nome exato da tabela. VOCE PRECISA DIGITAR O NOME EXATO DA TABELA')
