@@ -99,7 +99,7 @@ if __name__ == "__main__":
             print('- PARTICIPA')
             print('-------------- LEMBRE DE DIGITAR O NOME EXATO DE TABELAS, COLUNAS -------------')
             print('-------------- Essas sao as opcoes de tabela -------------')
-            table = raw_input("Qual sua opcao?")
+            table = raw_input("Qual sua opcao de tabela?")
             filter_column = raw_input("A partir de qual coluna devemos selecionar? ")
             filter = raw_input("E qual deve ser o valor dessa coluna? ")
             sgbd.select(table, filter_column, filter)
