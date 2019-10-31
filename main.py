@@ -1,3 +1,5 @@
+import sgbd
+
 if __name__ == "__main__":
     print ('---------------- Menu ----------------')
     print ('Digite 1 para inserir um dado no banco')
@@ -88,6 +90,9 @@ if __name__ == "__main__":
         print('- PARTICIPA')
         print('-------------- Essas sao as opcoes de tabela -------------')
         table = raw_input("Qual sua opcao?")
+        filter_column = raw_input("Voce quer filtrar por qual coluna?")
+        filter = raw_input("Por qual voce quer selecionar? Qual sera seu filtro")
+        sgbd.select(table, filter_column, filter)
     else:
         print ('Bye')
         exit()
