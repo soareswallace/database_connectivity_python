@@ -29,3 +29,9 @@ def select(table, filter_column, filter):
 def update(table, column, filter_column, filter, new_value):
     c = take_cursor()
     c.execute('update ' + table + ' set ' + column + ' = ' + new_value + ' where ' + filter_column + ' = ' + filter)
+    print('Atualizado com sucesso')
+
+def delete(table, filter_column, filter):
+    c = take_cursor()
+    c.execute('delete from ' + table + ' where ' + filter_column + ' = ' + filter)
+    print('Deletado com sucesso')
