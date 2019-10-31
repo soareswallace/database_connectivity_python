@@ -3,6 +3,7 @@ import sgbd
 if __name__ == "__main__":
     op = 5
     while(op != 0):
+        print (op)
         print ('---------------- Menu ----------------')
         print ('Digite 1 para inserir um dado no banco')
         print ('Digite 2 para atualizar um dado no banco')
@@ -14,7 +15,7 @@ if __name__ == "__main__":
 
         if op == '1':
             #INSERIR
-            print ('Em qual tabela? Você precisa digitar o nome exato da tabela. VOCE PRECISA DIGITAR O NOME EXATO DA TABELA')
+            print ('Em qual tabela? Voce precisa digitar o nome exato da tabela. VOCE PRECISA DIGITAR O NOME EXATO DA TABELA')
             print('- EMPREGADO')
             print('- TELEFONES')
             print('- PASSAGEIRO')
@@ -30,11 +31,12 @@ if __name__ == "__main__":
             print('- COMPART')
             print('- RECEBE')
             print('- PARTICIPA')
+            print('-------------- LEMBRE DE DIGITAR O NOME EXATO DE TABELAS, COLUNAS -------------')
             print('-------------- Essas sao as opcoes de tabela -------------')
-            table = raw_input("Qual sua opcao?")
+            table = raw_input("Qual sua opcao? ")
         elif op == '2':
             # ATUALIZAR
-            print ('Em qual tabela? Você precisa digitar o nome exato da tabela. VOCE PRECISA DIGITAR O NOME EXATO DA TABELA')
+            print ('Em qual tabela? Voce precisa digitar o nome exato da tabela. VOCE PRECISA DIGITAR O NOME EXATO DA TABELA')
             print('- EMPREGADO')
             print('- TELEFONES')
             print('- PASSAGEIRO')
@@ -50,16 +52,17 @@ if __name__ == "__main__":
             print('- COMPART')
             print('- RECEBE')
             print('- PARTICIPA')
+            print('-------------- LEMBRE DE DIGITAR O NOME EXATO DE TABELAS, COLUNAS -------------')
             print('-------------- Essas sao as opcoes de tabela -------------')
-            table = raw_input("Qual sua opcao?")
-            filter_column = raw_input("A partir de qual coluna devemos selecionar?")
-            filter = raw_input("E qual deve ser o valor dessa coluna?")
-            column = raw_input("Qual coluna deve ser alterada?")
-            new_value = raw_input("Qual o novo valor dessa coluna?")
+            table = raw_input("Qual sua opcao? ")
+            filter_column = raw_input("A partir de qual coluna devemos selecionar? ")
+            filter = raw_input("E qual deve ser o valor dessa coluna? ")
+            column = raw_input("Qual coluna deve ser alterada? ")
+            new_value = raw_input("Qual o novo valor dessa coluna? ")
             sgbd.update(table, column, filter_column, filter, new_value)
         elif op == '3':
             # REMOVER
-            print ('Em qual tabela? Você precisa digitar o nome exato da tabela. VOCE PRECISA DIGITAR O NOME EXATO DA TABELA')
+            print ('Em qual tabela? Voce precisa digitar o nome exato da tabela. VOCE PRECISA DIGITAR O NOME EXATO DA TABELA')
             print('- EMPREGADO')
             print('- TELEFONES')
             print('- PASSAGEIRO')
@@ -75,14 +78,15 @@ if __name__ == "__main__":
             print('- COMPART')
             print('- RECEBE')
             print('- PARTICIPA')
+            print('-------------- LEMBRE DE DIGITAR O NOME EXATO DE TABELAS, COLUNAS -------------')
             print('-------------- Essas sao as opcoes de tabela -------------')
-            table = raw_input("Qual sua opcao?")
-            filter_column = raw_input("A partir de qual coluna devemos selecionar?")
-            filter = raw_input("E qual deve ser o valor dessa coluna?")
+            table = raw_input("Qual sua opcao? ")
+            filter_column = raw_input("A partir de qual coluna devemos selecionar? ")
+            filter = raw_input("E qual deve ser o valor dessa coluna? ")
             sgbd.delete(table, filter_column, filter)
         elif op == '4':
             # SELECIONAR
-            print ('Em qual tabela? Você precisa digitar o nome exato da tabela. VOCE PRECISA DIGITAR O NOME EXATO DA TABELA')
+            print ('Em qual tabela? Voce precisa digitar o nome exato da tabela. VOCE PRECISA DIGITAR O NOME EXATO DA TABELA')
             print('- EMPREGADO')
             print('- TELEFONES')
             print('- PASSAGEIRO')
@@ -98,10 +102,12 @@ if __name__ == "__main__":
             print('- COMPART')
             print('- RECEBE')
             print('- PARTICIPA')
+            print('-------------- LEMBRE DE DIGITAR O NOME EXATO DE TABELAS, COLUNAS -------------')
             print('-------------- Essas sao as opcoes de tabela -------------')
             table = raw_input("Qual sua opcao?")
-            filter_column = raw_input("A partir de qual coluna devemos selecionar?")
-            filter = raw_input("E qual deve ser o valor dessa coluna?")
+            filter_column = raw_input("A partir de qual coluna devemos selecionar? ")
+            filter = raw_input("E qual deve ser o valor dessa coluna? ")
             sgbd.select(table, filter_column, filter)
-    print ('Bye')
-    exit()
+        else:
+            print ('Bye')
+            exit()
